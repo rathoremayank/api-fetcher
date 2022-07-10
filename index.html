@@ -53,15 +53,12 @@
                 .then(response => {
                 return response.json();
             })
-                //.then(jsondata => console.log(jsondata))
                 .then(jsondata => {
-
-                for(var i in jsondata)
+		    for(var i in jsondata)
                     apiArray.push([i, jsondata [i]]); 
-		    		    
+		    
 		    const n = apiArray.length; 
 		    console.log(n); 
-		    
 		    
 		    for(var i = 0; i < n; i++){
 			    for( var j = 1; j < 2; j++){
@@ -70,52 +67,8 @@
 					    console.log(apiArray[i][j]);
 				    }
 			    }
-		    }
-		    
-		    /*
-		    for(var i = 0; i < n; i++){
-			    for( var j = 1; j < 2; j++){
-				    if(apiName === apiArray[i][j].apiname && apiEnv === apiArray[i][j].env){
-					    document.getElementById("apijson").value += apiArray[i][j]; 
-					    console.log(apiArray[i][j]);
-				    }
-			    }
-		    }
-		    */
-
-		    /*
-		    //object
-		    apiArray.forEach(api => {
-			    api.forEach(element => {
-				    console.log(Object.getPrototypeOf(element));
-				    console.log(element.toString());				    
-			    });
-		    });		    
-		    let result = apiArray.forEach(api => {api.find(data => data.env ==="sit")});
-		    console.log(result); 
-		    */
-		    
-         
+		    }   
             });   
-        }
-    	  
-	    /*
-        function findAPI(arr){		
-		var apiNameSelect = document.getElementById("apiname");
-		var apiName = apiNameSelect.options[apiNameSelect.selectedIndex];
-		
-		var apiEnvSelect = document.getElementById("apienv");
-		var apiEnv = apiEnvSelect.options[apiEnvSelect.selectedIndex];
-		
-		console.log(apiName.text);
-		console.log(apiEnv.text); 
-
-		var newArray = arr.filter(function (el) {
-			return el.apiname ==  apiName && el.env == apiEnv;
-		});	
-		console.log(newArray); 
-		document.getElementById("apijson").value = newArray; 
-	} */
-	    
+        } 
     </script>
 </html>
