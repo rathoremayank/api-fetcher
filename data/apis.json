@@ -1,60 +1,57 @@
-{
-    "apis" : [
-        {
-            "apiname" : "payfone",
-            "env" : "dev",
-            "sfname" : "Payfone *Dev",
-            "sfcin" : "CI123456",
-            "coderepo" : "http://payfone-code.git",
-            "codeversionlatest" : "1.2.3",
-            "codebranchlatest" : "release/feature21",
-            "ramlns" : "com/payfone/raml",
-            "ramlver" : "1.2.0",
-            "configrepo" : "http://payfone-config.git",
-            "configbranch" : "release/v1.0-dev",
-            "apaasurl" : "https://k8s.io/12345"
-        },
-        {
-            "apiname" : "accountf",
-            "env" : "sit",
-            "sfname" : "AccountF *SIT",
-            "sfcin" : "CI123456",
-            "coderepo" : "http://accountf-code.git",
-            "codeversionlatest" : "1.2.3",
-            "codebranchlatest" : "release/feature21",
-            "ramlns" : "com/accountf/raml",
-            "ramlver" : "1.2.0",
-            "configrepo" : "http://accountf-config.git",
-            "configbranch" : "release/v1.0-sit",
-            "apaasurl" : "https://k8s.io/12346"
-        },
-        {
-            "apiname" : "kyc",
-            "env" : "vpt",
-            "sfname" : "KYC *Dev",
-            "sfcin" : "CI123456",
-            "coderepo" : "http://kyc-code.git",
-            "codeversionlatest" : "1.2.3",
-            "codebranchlatest" : "release/feature21",
-            "ramlns" : "com/kyc/raml",
-            "ramlver" : "1.2.0",
-            "configrepo" : "http://kyc-config.git",
-            "configbranch" : "release/v1.0-vpt",
-            "apaasurl" : "https://k8s.io/12347"
-        },
-        {
-            "apiname" : "document",
-            "env" : "Prod",
-            "sfname" : "Document *Prod",
-            "sfcin" : "CI123456",
-            "coderepo" : "http://document-code.git",
-            "codeversionlatest" : "1.2.3",
-            "codebranchlatest" : "release/feature21",
-            "ramlns" : "com/document/raml",
-            "ramlver" : "1.2.0",
-            "configrepo" : "http://document-config.git",
-            "configbranch" : "release/v1.0-prod",
-            "apaasurl" : "https://k8s.io/12348"
-        }
-    ]
-}
+ [{
+ 		"apiname": "payfone",
+ 		"env": "dev",
+ 		"sfname": "Payfone *Dev",
+ 		"sfcin": "CI123456",
+ 		"coderepo": "http://payfone-code.git",
+ 		"codeversionlatest": "1.2.3",
+ 		"codebranchlatest": "release/feature21",
+ 		"ramlns": "com/payfone/raml",
+ 		"ramlver": "1.2.0",
+ 		"configrepo": "http://payfone-config.git",
+ 		"configbranch": "release/v1.0-dev",
+ 		"apaasurl": "https://k8s.io/12345"
+ 	},
+ 	{
+ 		"apiname": "accountf",
+ 		"env": "sit",
+ 		"sfname": "AccountF *SIT",
+ 		"sfcin": "CI123456",
+ 		"coderepo": "http://accountf-code.git",
+ 		"codeversionlatest": "1.2.3",
+ 		"codebranchlatest": "release/feature21",
+ 		"ramlns": "com/accountf/raml",
+ 		"ramlver": "1.2.0",
+ 		"configrepo": "http://accountf-config.git",
+ 		"configbranch": "release/v1.0-sit",
+ 		"apaasurl": "https://k8s.io/12346"
+ 	},
+ 	{
+ 		"apiname": "kyc",
+ 		"env": "vpt",
+ 		"sfname": "KYC *Dev",
+ 		"sfcin": "CI123456",
+ 		"coderepo": "http://kyc-code.git",
+ 		"codeversionlatest": "1.2.3",
+ 		"codebranchlatest": "release/feature21",
+ 		"ramlns": "com/kyc/raml",
+ 		"ramlver": "1.2.0",
+ 		"configrepo": "http://kyc-config.git",
+ 		"configbranch": "release/v1.0-vpt",
+ 		"apaasurl": "https://k8s.io/12347"
+ 	},
+ 	{
+ 		"apiname": "document",
+ 		"env": "Prod",
+ 		"sfname": "Document *Prod",
+ 		"sfcin": "CI123456",
+ 		"coderepo": "http://document-code.git",
+ 		"codeversionlatest": "1.2.3",
+ 		"codebranchlatest": "release/feature21",
+ 		"ramlns": "com/document/raml",
+ 		"ramlver": "1.2.0",
+ 		"configrepo": "http://document-config.git",
+ 		"configbranch": "release/v1.0-prod",
+ 		"apaasurl": "https://k8s.io/12348"
+ 	}
+ ]
