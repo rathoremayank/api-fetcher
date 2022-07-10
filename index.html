@@ -26,7 +26,7 @@
         </form>
 
         <textarea name="apijson" id="apijson">
-            Your API Details show here.
+           
         </textarea>
 
         <footer style="text-align: center; font-size: small;">
@@ -46,6 +46,9 @@
             var apiEnvSelect = document.getElementById("apienv");
             var apiEnv = apiEnvSelect.options[apiEnvSelect.selectedIndex].value;
 		
+		console.log(apiName);
+		console.lod(apiEnv);
+		
             fetch("data/apis.json")
                 .then(response => {
                 return response.json();
@@ -59,9 +62,19 @@
 		    const n = apiArray.length; 
 		    console.log(n); 
 		    
+		    
 		    for(var i = 0; i < n; i++){
 			    for( var j = 1; j < 2; j++){
-				    if(apiName == apiArray[i][j].apiname && apiEnv.text == apiArray[i][j].env){
+				    if(apiName == apiArray[i][j].apiname && apiEnv == apiArray[i][j].env){
+					    document.getElementById("apijson").value += apiArray[i][j]; 
+					    console.log(apiArray[i][j]);
+				    }
+			    }
+		    }
+		    
+		    for(var i = 0; i < n; i++){
+			    for( var j = 1; j < 2; j++){
+				    if(apiName === apiArray[i][j].apiname && apiEnv === apiArray[i][j].env){
 					    document.getElementById("apijson").value += apiArray[i][j]; 
 					    console.log(apiArray[i][j]);
 				    }
