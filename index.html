@@ -68,7 +68,7 @@
 		console.log(apiEnv.text); 
 
 		
-		var newArray = apiArray.apis.filter(function (el) {
+		var newArray = apiArray.filter(function (el) {
 			return el.apiname ==  apiName && el.env == apiEnv;
 		});
 		
