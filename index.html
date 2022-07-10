@@ -53,9 +53,13 @@
         }
         
         function findAPI(apiArrayParam){
-            var apiName = document.getElementById("apiname").selectedIndex.text;
+            var apiNameSelect = document.getElementById("apiname");
+			var apiName = apiNameSelect.options[apiNameSelect.selectedIndex];
+            
+            var apiEnvSelect = document.getElementById("apienv");
+			var apiEnv = apiEnvSelect.options[apiEnvSelect.selectedIndex];
+            
             console.log(apiName);
-            var apiEnv = document.getElementById("apienv").selectedIndex.text;
             console.log(apiEnv);  
         }
         
