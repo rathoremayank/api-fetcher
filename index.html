@@ -1,7 +1,6 @@
 <html>
     <head>
         <title>APIFetcher-v1.0.0</title>
-        <script src="require.js"></script>
     </head>
     <body>
         
@@ -34,14 +33,18 @@
         </footer>
     </body>
     <script>
+        var apiArray  = []; 
+        
+        //fetching data from apis.json and storing it in an array
         fetch("data/apis.json")
             .then(response => {
             return response.json();
         })
-            .then(jsondata => console.log(jsondata));
+            //.then(jsondata => console.log(jsondata))
+            .then(jsondata => const apiArray = jsondata.parse());
         
-//         const jsonData= require(['./data/apis.json']); 
-//         console.log(jsonData);
+        
+        console.log(apiArray
         
     </script>
 </html>
