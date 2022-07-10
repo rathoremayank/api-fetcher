@@ -71,10 +71,12 @@
 		console.log(apiName.text);
 		console.log(apiEnv.text); 
 
+		var newArray = arr.filter(api => api.apiname === apiName)
 		
+		/*
 		var newArray = arr.filter(function (el) {
 			return el.apiname ==  apiName && el.env == apiEnv;
-		});
+		});*/
 		
 		console.log(newArray); 
 		document.getElementById("apijson").value = newArray; 
