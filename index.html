@@ -4,7 +4,7 @@
     </head>
     <body>
         
-        <form action="#">
+        <form action="loadData">
             <select name="apiname" id="apiname">
                 <option value="default" selected> Choose API</option>
                 <option value="payfone"> payfone </option>
@@ -35,30 +35,28 @@
     <script> 
         var apiArray = []; 
         //fetching data from apis.json and storing it in an array
-        fetch("data/apis.json")
-            .then(response => {
-            return response.json();
-        })
-            //.then(jsondata => console.log(jsondata))
-            .then(jsondata => {
-            
-            for(var i in jsondata)
-                apiArray.push([i, jsondata [i]]); 
-            console.log(apiArray);
-            
-            findAPI(apiArray);
-        });
         
+        function loadData(){
+            fetch("data/apis.json")
+                .then(response => {
+                return response.json();
+            })
+                //.then(jsondata => console.log(jsondata))
+                .then(jsondata => {
+
+                for(var i in jsondata)
+                    apiArray.push([i, jsondata [i]]); 
+                console.log(apiArray);
+
+                findAPI(apiArray);
+            });   
+        }
         
         function findAPI(apiArrayParam){
             var apiName = document.getElementById("apiname").value;
             console.log(apiName);
             var apiEnv = document.getElementById("apienv").value;
-            console.log(apiEnv); 
-            
-            
-            
-        
+            console.log(apiEnv);  
         }
         
         
