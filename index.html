@@ -55,11 +55,14 @@
 		    //object
 		    apiArray.forEach(api => {
 			    api.forEach(element => {
-				    Object.getPrototypeOf(element);
+				    console.log(Object.getPrototypeOf(element));
 				    console.log(element.toString());
 				    
 			    });
 		    });
+		    
+		    let result = apiArray.find(api => api.env === "sit");
+		    console.log(result); 
 		    
                 findAPI(apiArray);
             });   
