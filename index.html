@@ -54,9 +54,9 @@
 	    
 	    
 	  
-        function findAPI(apis){
-		console.log(apis); 
+        function findAPI(apiArray){
 		
+		console.log("Original Array: \n" + apiArray); 
 		
 		var apiNameSelect = document.getElementById("apiname");
 		var apiName = apiNameSelect.options[apiNameSelect.selectedIndex];
@@ -67,10 +67,12 @@
 		console.log(apiName.text);
 		console.log(apiEnv.text); 
 
-		var newArray = apis.filter(function (el) {
-			return el.apis.apiname == 'payfone' && el.apis.env == 'dev';
+		
+		var newArray = apiArray.apis.filter(function (el) {
+			return el.apiname ==  apiName && el.env == apiEnv;
 		});
 		
+		console.log("Filtered Array: \n" + newArray); 
 		document.getElementById("apijson").value = newArray; 
 	}   
         
