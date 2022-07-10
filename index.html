@@ -33,10 +33,10 @@
         </footer>
     </body>
     <script> 
-        var apiArray; 
         //fetching data from apis.json and storing it in an array
         
         function loadData(){
+	    var apiArray = []; 
             fetch("data/apis.json")
                 .then(response => {
                 return response.json();
@@ -46,7 +46,7 @@
 
                 for(var i in jsondata)
                     apiArray.push([i, jsondata [i]]); 
-
+		    
                 findAPI(apiArray);
             });   
         }
