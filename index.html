@@ -37,12 +37,12 @@
         // fetch("./data/api.json")
         // .then(response => response.json())
         // .then(json => console.log(json));
-
+        
         const data = require(['fs']);
         require(['fs'], function (fs) {
             console.log("loaded fs");
         });
-        var fileString = fs.readFileSync("data/api.json").toString();
+        var fileString = data.readFileSync("data/api.json").toString();
         var fileObj = JSON.parse(fileString);
         var apiArray = fileObj.apis; 
         console.log(apiArray)
