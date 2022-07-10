@@ -54,17 +54,8 @@
         
 	    
 	    
-	function filterAPIS(apis) {
-		return apis.apiname === 'payfone';
-	}  
-	    
-	
-	    
+	  
         function findAPI(apiArrayParam){
-		
-		console.log(apiArrayParam.find(filterAPIS));
-		
-		/*
 		var apiNameSelect = document.getElementById("apiname");
 		var apiName = apiNameSelect.options[apiNameSelect.selectedIndex];
 		
@@ -75,7 +66,7 @@
 		console.log(apiEnv.text); 
 		
 		const result = apiArrayParam.find(apis => apis.apiname == apiName.text);
-		*/
+	
 		
 		//const result = apiArrayParam.find(apis => apis.apiname == apiName && apis.env == apiEnv);
 		console.log(result)
