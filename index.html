@@ -40,6 +40,12 @@
 	    var apiArray = []; 
 	    var newArray = []; 
 		
+	    var apiNameSelect = document.getElementById("apiname");
+	    var apiName = apiNameSelect.options[apiNameSelect.selectedIndex];
+		
+            var apiEnvSelect = document.getElementById("apienv");
+            var apiEnv = apiEnvSelect.options[apiEnvSelect.selectedIndex];
+		
             fetch("data/apis.json")
                 .then(response => {
                 return response.json();
@@ -55,7 +61,10 @@
 		    
 		    for(var i = 0; i < n; i++){
 			    for( var j = 0; j < 2; j++){
-				    console.log(apiArray[i][j].apiname);
+				    
+				    if(apiArray[i][j].apiname === apiName.text && apiArray[i][j].env === apiEnv.text){
+					    document.getElementById("apijson").value += apiArray[i][j]; 
+				    }
 			    }
 		    }
 
@@ -71,10 +80,11 @@
 		    console.log(result); 
 		    */
 		    
-                findAPI(apiArray);
+         
             });   
         }
     	  
+	    /*
         function findAPI(arr){		
 		var apiNameSelect = document.getElementById("apiname");
 		var apiName = apiNameSelect.options[apiNameSelect.selectedIndex];
@@ -90,6 +100,7 @@
 		});	
 		console.log(newArray); 
 		document.getElementById("apijson").value = newArray; 
-	}         
+	} */
+	    
     </script>
 </html>
