@@ -66,12 +66,13 @@
 		    for(var i = 0; i < n; i++){
 			    for( var j = 1; j < 2; j++){
 				    if(apiName == apiArray[i][j].apiname && apiEnv == apiArray[i][j].env){
-					    document.getElementById("apijson").value += apiArray[i][j]; 
+					    document.getElementById("apijson").value += apiArray[i][j].toString(); 
 					    console.log(apiArray[i][j]);
 				    }
 			    }
 		    }
 		    
+		    /*
 		    for(var i = 0; i < n; i++){
 			    for( var j = 1; j < 2; j++){
 				    if(apiName === apiArray[i][j].apiname && apiEnv === apiArray[i][j].env){
@@ -80,6 +81,7 @@
 				    }
 			    }
 		    }
+		    */
 
 		    /*
 		    //object
