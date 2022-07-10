@@ -48,7 +48,7 @@
                 for(var i in jsondata)
                     apiArray.push([i, jsondata [i]]); 
 		    
-		apiArray.forEach(api => {api.forEach(element => console.log(element));});
+		apiArray.forEach(api => {api.forEach(element => console.log(element.env));});
 		    
                 findAPI(apiArray);
             });   
