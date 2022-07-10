@@ -32,7 +32,8 @@
             Author: Mayank Singh Rathore
         </footer>
     </body>
-    <script>        
+    <script> 
+        var apiArray = []; 
         //fetching data from apis.json and storing it in an array
         fetch("data/apis.json")
             .then(response => {
@@ -40,10 +41,16 @@
         })
             //.then(jsondata => console.log(jsondata))
             .then(jsondata => {
-            var apiArray = jsondata;
+            
+            for(var i in jsondata)
+                apiArray.push([i, jsondata [i]]); 
+            
+            //var apiArray = jsondata;
             console.log(apiArray);
         });
         
+        
+
         
         
         
