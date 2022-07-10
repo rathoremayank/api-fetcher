@@ -47,32 +47,36 @@
 
                 for(var i in jsondata)
                     apiArray.push([i, jsondata [i]]); 
-		  
 		    
 		    //array
-		    apiArray.forEach(api => console.log(api));
+		    
+		    
+		    const n = apiArray.length; 
+		    console.log(n); 
+		    
+		    for(var i = 0; i < n; i++){
+			    console.log(apiArray[i].apiname);
+			    console.log(apiArray[i].env);
+		    }
+			    
 		
+		    /*
 		    //object
 		    apiArray.forEach(api => {
 			    api.forEach(element => {
 				    console.log(Object.getPrototypeOf(element));
-				    console.log(element.toString());
-				    
+				    console.log(element.toString());				    
 			    });
-		    });
-		    
+		    });		    
 		    let result = apiArray.forEach(api => {api.find(data => data.env ==="sit")});
 		    console.log(result); 
+		    */
 		    
                 findAPI(apiArray);
             });   
         }
-        
-	    
-	    
-	  
-        function findAPI(arr){
-		
+    	  
+        function findAPI(arr){		
 		var apiNameSelect = document.getElementById("apiname");
 		var apiName = apiNameSelect.options[apiNameSelect.selectedIndex];
 		
@@ -84,11 +88,9 @@
 
 		var newArray = arr.filter(function (el) {
 			return el.apiname ==  apiName && el.env == apiEnv;
-		});
-		
+		});	
 		console.log(newArray); 
 		document.getElementById("apijson").value = newArray; 
-	}   
-        
+	}         
     </script>
 </html>
