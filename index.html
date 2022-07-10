@@ -46,7 +46,6 @@
 
                 for(var i in jsondata)
                     apiArray.push([i, jsondata [i]]); 
-                console.log(apiArray);
 
                 findAPI(apiArray);
             });   
@@ -56,6 +55,10 @@
 	    
 	  
         function findAPI(apis){
+		console.log(apis); 
+		console.log(apis.apiname);
+		
+		
 		var apiNameSelect = document.getElementById("apiname");
 		var apiName = apiNameSelect.options[apiNameSelect.selectedIndex];
 		
