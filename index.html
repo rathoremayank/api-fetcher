@@ -4,7 +4,7 @@
     </head>
     <body>
         
-        <form action="loadData">
+        <form action="#">
             <select name="apiname" id="apiname">
                 <option value="default" selected> Choose API</option>
                 <option value="payfone"> payfone </option>
@@ -21,7 +21,7 @@
                 <option value="lcp">LCP</option>
                 <option value="prod">PROD</option>
             </select>
-            <button name="apisubmit" type="submit">Fetch Details</button>
+            <button name="apisubmit" type="submit" onclick="loadData()">Fetch Details</button>
         </form>
 
         <textarea name="apijson" id="apijson">
