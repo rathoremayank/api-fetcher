@@ -39,20 +39,11 @@
             .then(response => {
             return response.json();
         })
-            //.then(jsondata => console.log(jsondata))
             .then(jsondata => {
-            
-            for(var i in jsondata)
-                apiArray.push([i, jsondata [i]]); 
-            
-            //var apiArray = jsondata;
+            apiArray = JSON.parse(jsondata); 
             console.log(apiArray);
         });
         
-        
-
-        
-        
-        
+       
     </script>
 </html>
