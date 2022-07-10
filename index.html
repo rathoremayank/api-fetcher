@@ -56,7 +56,6 @@
 	  
         function findAPI(apis){
 		console.log(apis); 
-		console.log(apis.apiname);
 		
 		
 		var apiNameSelect = document.getElementById("apiname");
@@ -69,7 +68,7 @@
 		console.log(apiEnv.text); 
 
 		var newArray = apis.filter(function (el) {
-			return el.apiname == 'payfone' && el.env == 'dev';
+			return el.apis.apiname == 'payfone' && el.apis.env == 'dev';
 		});
 		
 		document.getElementById("apijson").value = newArray; 
