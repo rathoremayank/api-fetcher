@@ -61,10 +61,10 @@
 		    
 		    for(var i = 0; i < n; i++){
 			    for( var j = 1; j < 2; j++){
-				    console.log(apiArray[i][j].apiname); 
-				    console.log(apiArray[i][j].env); 
+				    console.log(apiName); 
+				    console.log(apiEnv); 
 				    
-				    if(apiArray[i][j].apiname == apiName.text && apiArray[i][j].env == apiEnv.text){
+				    if(apiArray[i][j].apiname == apiName && apiArray[i][j].env == apiEnv){
 					    document.getElementById("apijson").value += apiArray[i][j]; 
 				    }
 			    }
