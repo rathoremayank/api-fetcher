@@ -35,7 +35,11 @@
         </footer>
     </body>
     <script>
-        fetch("./data/apis.json").then(response => { return response.json(); }).then(jsondata => console.log(jsondata));
+        fetch("data/apis.json")
+            .then(response => {
+            return response.json();
+        })
+            .then(jsondata => console.log(jsondata));
         
 //         const jsonData= require(['./data/apis.json']); 
 //         console.log(jsonData);
