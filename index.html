@@ -61,7 +61,7 @@
 			    });
 		    });
 		    
-		    let result = apiArray.find(api => api.env === "sit");
+		    let result = apiArray.forEach(api => {api.find(data => data.env ==="sit")});
 		    console.log(result); 
 		    
                 findAPI(apiArray);
