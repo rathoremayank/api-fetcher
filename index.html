@@ -54,9 +54,9 @@
 	    
 	    
 	  
-        function findAPI(apiArray){
+        function findAPI(arr){
 		
-		console.log("Original Array: \n" + apiArray); 
+		console.log(arr); 
 		
 		var apiNameSelect = document.getElementById("apiname");
 		var apiName = apiNameSelect.options[apiNameSelect.selectedIndex];
@@ -68,7 +68,7 @@
 		console.log(apiEnv.text); 
 
 		
-		var newArray = apiArray.filter(function (el) {
+		var newArray = arr.filter(function (el) {
 			return el.apiname ==  apiName && el.env == apiEnv;
 		});
 		
