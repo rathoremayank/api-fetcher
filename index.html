@@ -41,10 +41,13 @@
             return response.json();
         })
             //.then(jsondata => console.log(jsondata))
-            .then(jsondata => apiArray = jsondata);
+            .then(jsondata => {
+            apiArray = jsondata;
+        });
         
         
         console.log(apiArray);
+        
         
     </script>
 </html>
