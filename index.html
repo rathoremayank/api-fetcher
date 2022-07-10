@@ -56,14 +56,7 @@
 	    
 	  
         function findAPI(arr){
-		var apiNameSelect = document.getElementById("apiname");
-		var apiName = apiNameSelect.options[apiNameSelect.selectedIndex];
 		
-		var apiEnvSelect = document.getElementById("apienv");
-		var apiEnv = apiEnvSelect.options[apiEnvSelect.selectedIndex];
-		
-		console.log(apiName.text);
-		console.log(apiEnv.text); 
 		
 		let filteredAPIs = arr.filter(filterAPIByID)
 		
@@ -72,10 +65,18 @@
         }
 	    
 	function filterAPIByID(api) {
-	  if (api.apiname==apiName.text && api.env==apiEnv.text) {
-	    return true
-	  }
-	  return false;
+		var apiNameSelect = document.getElementById("apiname");
+		var apiName = apiNameSelect.options[apiNameSelect.selectedIndex];
+		
+		var apiEnvSelect = document.getElementById("apienv");
+		var apiEnv = apiEnvSelect.options[apiEnvSelect.selectedIndex];
+		
+		console.log(apiName.text);
+		console.log(apiEnv.text); 
+		if (api.apiname==apiName.text && api.env==apiEnv.text) {
+			return true
+		}
+		return false;
 	}
         
         
