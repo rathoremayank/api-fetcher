@@ -41,7 +41,7 @@
             return response.json();
         })
             //.then(jsondata => console.log(jsondata))
-            .then(jsondata => apiArray = jsondata.parse());
+            .then(jsondata => apiArray = JSON.parse(jsondata));
         
         
         console.log(apiArray);
