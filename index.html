@@ -54,13 +54,13 @@
         
         function findAPI(apiArrayParam){
             var apiNameSelect = document.getElementById("apiname");
-	    var apiName = apiNameSelect.options[apiNameSelect.selectedIndex].text;
+	    var apiName = apiNameSelect.options[apiNameSelect.selectedIndex];
             
             var apiEnvSelect = document.getElementById("apienv");
-	    var apiEnv = apiEnvSelect.options[apiEnvSelect.selectedIndex].text;
+	    var apiEnv = apiEnvSelect.options[apiEnvSelect.selectedIndex];
             
-            console.log(apiName);
-            console.log(apiEnv);  
+            console.log(apiName).text;
+            console.log(apiEnv).text;  
         }
         
         
