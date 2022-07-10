@@ -58,6 +58,11 @@
         function findAPI(arr){
 		
 		console.log('Filtered Array\n', arr)
+		
+		console.log(arr.find(api => {
+   		return api.apiname == 'payfone'
+		}))
+		
 		let filteredAPIs = arr.filter(filterAPIByID)
 		console.log('Filtered Array\n', filteredAPIs)
 		
