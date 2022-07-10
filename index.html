@@ -65,11 +65,20 @@
 		console.log(apiName.text);
 		console.log(apiEnv.text); 
 		
-		const result = apiArrayParam.find(apis => apis.apiname == apiName.text);
-	
+		//const result = apiArrayParam.find(apis => apis.apiname == apiName.text);
+		//console.log(result)
 		
-		//const result = apiArrayParam.find(apis => apis.apiname == apiName && apis.env == apiEnv);
-		console.log(result)
+		/**
+		 * Filter array items based on search criteria (query)
+		 */
+		function filterItems(arr, query) {
+		  return arr.filter(function(el) {
+		    return el.toLowerCase().indexOf(query.toLowerCase()) !== -1
+		  })
+		}
+
+		console.log(filterItems(apiArrayParam, apiName.text)) 
+		
 		
 		
         }
