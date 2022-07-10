@@ -59,13 +59,11 @@
 		    const n = apiArray.length; 
 		    console.log(n); 
 		    
-		    console.log(apiName.text); 
-		    console.log(apiEnv.text);
-		    
 		    for(var i = 0; i < n; i++){
 			    for( var j = 1; j < 2; j++){
 				    if(apiName == apiArray[i][j].apiname && apiEnv.text == apiArray[i][j].env){
 					    document.getElementById("apijson").value += apiArray[i][j]; 
+					    console.log(apiArray[i][j]);
 				    }
 			    }
 		    }
