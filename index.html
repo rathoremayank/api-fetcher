@@ -62,8 +62,9 @@
 		console.log(apiName.text);
 		console.log(apiEnv.text); 
 		
-		const result apiArrayParam.apiname == apiName && apiArrayParam.env == apiEnv;
+		const result = apiArrayParam.find(apis => apis.apiname == apiName);
 		
+		//const result = apiArrayParam.find(apis => apis.apiname == apiName && apis.env == apiEnv);
 		console.log(result)
 		
 		
