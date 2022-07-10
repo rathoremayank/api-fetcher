@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>APIFetcher-v1.0.0</title>
+    </head>
+    <body>
+        
+        <form action="#">
+            <select name="apiname" id="apiname">
+                <option value="default" selected> Choose API</option>
+                <option value="payfone"> payfone </option>
+                <option value="accountf">accountf</option>
+                <option value="kyc">kyc</option>
+                <option value="document">document</option>
+            </select>
+            <select name="apienv" id="apienv">
+                <option value="default" selected>Choose Environment</option>
+                <option value="dev">DEV</option>
+                <option value="sit">SIT</option>
+                <option value="oat">OAT</option>
+                <option value="vpt">VPT</option>
+                <option value="lcp">LCP</option>
+                <option value="prod">PROD</option>
+            </select>
+            <button name="apisubmit" type="submit">Fetch Details</button>
+        </form>
+
+        <textarea name="apijson" id="apijson">
+            Your API Details show here.
+        </textarea>
+
+        <footer style="text-align: center; font-size: small;">
+            Author: Mayank Singh Rathore
+        </footer>
+    </body>
+    <script>
+        // fetch("./data/api.json")
+        // .then(response => response.json())
+        // .then(json => console.log(json));
+
+        const data = require('fs');
+        var fileString = fs.readFileSync("data/api.json").toString();
+        var fileObj = JSON.parse(fileString);
+        var apiArray = fileObj.apis; 
+        console.log(apiArray)
+    </script>
+</html>
