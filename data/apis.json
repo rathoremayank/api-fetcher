@@ -1,5 +1,4 @@
-{
-	"apis": [{
+[{
 			"apiname": "payfone",
 			"env": "dev",
 			"sfname": "Payfone *Dev",
@@ -56,4 +55,3 @@
 			"apaasurl": "https://k8s.io/12348"
 		}
 	]
-}
