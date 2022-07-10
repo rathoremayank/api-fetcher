@@ -48,13 +48,18 @@
                 for(var i in jsondata)
                     apiArray.push([i, jsondata [i]]); 
 		  
+		    
+		    //array
 		    apiArray.forEach(api => console.log(api));
-			    
-		apiArray.forEach(api => {
-			api.forEach(element => {
-				element.forEach(member => console.log(member));
-			});
-		});
+		
+		    //object
+		    apiArray.forEach(api => {
+			    api.forEach(element => {
+				    Object.getPrototypeOf(element);
+				    console.log(element.toString());
+				    
+			    });
+		    });
 		    
                 findAPI(apiArray);
             });   
