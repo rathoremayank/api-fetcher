@@ -60,7 +60,7 @@
 		console.log('Filtered Array\n', arr)
 		
 		console.log(arr.find(api => {
-   		return api.apiname == 'payfone'
+   		return api.apis.apiname == 'payfone'
 		}))
 		
 		let filteredAPIs = arr.filter(filterAPIByID)
